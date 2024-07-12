@@ -1,4 +1,4 @@
-### Vladimiro Bellini
+# Vladimiro Bellini
 
 - **Correo:** vladimirobellini [at] gmail.com
 - **LinkedIn:** [linkedin.com/in/vladimirobellini](https://www.linkedin.com/in/vladimirobellini)
@@ -6,14 +6,14 @@
 
 ---
 
-### Extracto
+## Extracto
 Ingeniero de Datos e IA con más de 10 años de experiencia en integración, flujo y limpieza de datos. Especializado en la implementación de soluciones eficientes y sostenibles, con un enfoque en estrategias de datos e inteligencia artificial. Amplia experiencia en el desarrollo y optimización de modelos de aprendizaje automático y LLMs.
 
 ---
 
-### Experiencia Profesional
+## Experiencia Profesional
 
-**Inter-American Development Bank (IDB)**
+**Inter-American Development Bank / IADB**
 - **Product Owner, Data & AI Engineer - Chatbot LLM @ Mapainversiones**  
   Marzo 2024 - Presente (5 meses)  
   - Líder técnico en el desarrollo e implementación de Chatbots utilizando modelos generativos LLM, CacheDB, índices vectoriales, Python, Langchain y Azure Cloud.
@@ -27,7 +27,14 @@ Ingeniero de Datos e IA con más de 10 años de experiencia en integración, flu
   - Analítica de datos, integración y automatización de procesos.  
   - ETL/EL Architecture, flujos de datos GIS, scripting en Python, T-SQL, SSIS, SQL Server, PowerBI, Azure Cloud, Databricks y Apache Spark.
 
-**United Nations**
+**Freelance**
+- **Desarrollo e Ingeniería de Datos Extractivos y AI**  
+  Mayo 2024  
+  - Desarrollo de un proyecto para analizar y resumir diálogos financieros utilizando Azure OpenAI y Azure Functions.  
+  - Conexión a bases de datos SQL, procesamiento de transcripciones de diálogos, extracción de resúmenes, valores de cadena y valores numéricos, e inserción de resultados en tablas específicas. Benchmarking de modelos OS/OpenAI. Optimización de consumo de tokens y flujo multinodos LLM.
+  - Tecnologías utilizadas: prompting engineering, Langchain, Azure Functions, Azure OpenAI, pyodbc, Azure MS SQL, Pandas.
+
+**United Nations / Naciones Unidas (CEPAL)**
 - **Data Engineer & Back-end Consultant**  
   Septiembre 2020 - Enero 2023 (2 años 5 meses)  
   - Optimización de flujos de datos y refactorización de plataformas de datos estadísticos económicos.  
@@ -54,14 +61,8 @@ Ingeniero de Datos e IA con más de 10 años de experiencia en integración, flu
 **Gobierno de la Ciudad de Buenos Aires**
 - **Data Analyst & Back-end GIS Data Engineer Developer**  
   Marzo 2008 - Junio 2011 (3 años 4 meses)  
-  - Desarrollo de sistemas informáticos geográficos y plataformas de datos catastrales.
+  - Desarrollo de sistemas informáticos geográficos y plataformas de datos catastrales. Flujos de datos de múltiples origenes para centralizar datos catastrales (gis, nogis, multimedia, etc).
 
-**Freelance**
-- **Desarrollador de Extractext**  
-  Mayo 2024  
-  - Desarrollo de un proyecto para analizar y resumir diálogos financieros utilizando Azure OpenAI y Azure Functions.  
-  - Conexión a bases de datos SQL, procesamiento de transcripciones de diálogos, extracción de resúmenes, valores de cadena y valores numéricos, e inserción de resultados en tablas específicas.  
-  - Tecnologías utilizadas: prompting, Langchain, Azure Functions, Azure OpenAI, pyodbc, Azure MS SQL, Pandas.
 
 ---
 

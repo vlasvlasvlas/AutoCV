@@ -1,131 +1,98 @@
-### Vladimiro Bellini
+# AutoCV: De LinkedIn a PDF con Modelos LLM
 
-- **Correo:** vladimirobellini [at] gmail.com
-- **LinkedIn:** [linkedin.com/in/vladimirobellini](https://www.linkedin.com/in/vladimirobellini)
-- **GitHub:** [github.com/vlasvlasvlas](https://github.com/vlasvlasvlas)
+**AutoCV** es un proyecto que automatiza la generación de un Curriculum Vitae (CV) profesional. Utilizando datos extraídos de LinkedIn, los formatea en Markdown mediante un modelo de lenguaje de gran escala (LLM), y finalmente convierte ese Markdown en un archivo PDF estilizado.
 
----
+## Requisitos
 
-### Extracto
-Ingeniero de Datos e IA con más de 10 años de experiencia en integración, flujo y limpieza de datos. Especializado en la implementación de soluciones eficientes y sostenibles, con un enfoque en estrategias de datos e inteligencia artificial. Amplia experiencia en el desarrollo y optimización de modelos de aprendizaje automático y LLMs.
+- Python 3.x
+- `wkhtmltopdf` instalado y accesible en `C:\Program Files\wkhtmltopdf\bin\wkhtmltopdf.exe`
+- Librerías de Python:
+  - `pdfkit`
+  - `requests`
+  - `markdown2`
 
----
+## Instalación
 
-### Experiencia Profesional
+1. **Clonar el repositorio**:
 
-**Inter-American Development Bank (IDB)**
-- **Product Owner, Data & AI Engineer - Chatbot LLM @ Mapainversiones**  
-  Marzo 2024 - Presente (5 meses)  
-  - Líder técnico en el desarrollo e implementación de Chatbots utilizando modelos generativos LLM, CacheDB, índices vectoriales, Python, Langchain y Azure Cloud.
+   ```bash
+   git clone https://github.com/vlasvlasvlas/curriculum-cv.git
+   cd curriculum-cv
+   ```
 
-- **Product Owner & Data Engineer @ Mapainversiones Argentina**  
-  Enero 2022 - Presente (2 años 7 meses)  
-  - Desarrollo de plataformas de gestión de la información para mejorar la transparencia y eficiencia en América Latina.
+2. **Crear y activar un entorno virtual**:
 
-- **Data Engineer Consultant**  
-  Junio 2020 - Presente (4 años 2 meses)  
-  - Analítica de datos, integración y automatización de procesos.  
-  - ETL/EL Architecture, flujos de datos GIS, scripting en Python, T-SQL, SSIS, SQL Server, PowerBI, Azure Cloud, Databricks y Apache Spark.
+   ```bash
+   python -m venv venv
+   source venv/bin/activate  # En Windows: venv\Scripts\activate
+   ```
 
-**United Nations**
-- **Data Engineer & Back-end Consultant**  
-  Septiembre 2020 - Enero 2023 (2 años 5 meses)  
-  - Optimización de flujos de datos y refactorización de plataformas de datos estadísticos económicos.  
-  - Integración y automatización de datos, desarrollo de endpoints en Python (FLASK/RESTX/FASTAPI), T-SQL, SSIS, SQL Server.
+3. **Instalar las dependencias**:
 
-**Sistemas Mapache**
-- **Data Engineer & Back-end GIS Developer, Founder**  
-  Enero 2017 - Diciembre 2022 (6 años)  
-  - Soluciones geoespaciales web utilizando herramientas FOSS.  
-  - Desarrollo de ETLs en Python, Apache Airflow, flujos de datos GIS.
+   ```bash
+   pip install -r requirements.txt
+   ```
 
-**SIISA - Servicio Interactivo de Informes S.A.**
-- **Fintech GIS Data Analyst**  
-  Agosto 2016 - Abril 2019 (2 años 9 meses)  
-  - Procesamiento, migración y análisis de datos espaciales.  
-  - Geocodificación, enriquecimiento de datos, scraping, análisis y normalización.
+4. **Instalar `wkhtmltopdf`**:
 
-**Ministerio de Energía y Minería**
-- **Data Analyst & Back-end GIS Data Engineer Developer**  
-  Julio 2011 - Diciembre 2016 (5 años 6 meses)  
-  - Análisis y asesoramiento experto en sistemas de información geográfica.  
-  - Desarrollo del portal de datos abiertos y geoportal del ministerio.
+   Descarga e instala `wkhtmltopdf` desde [wkhtmltopdf releases](https://wkhtmltopdf.org/downloads.html).
 
-**Gobierno de la Ciudad de Buenos Aires**
-- **Data Analyst & Back-end GIS Data Engineer Developer**  
-  Marzo 2008 - Junio 2011 (3 años 4 meses)  
-  - Desarrollo de sistemas informáticos geográficos y plataformas de datos catastrales.
+## Uso
 
-**Freelance**
-- **Desarrollador de Extractext**  
-  Mayo 2024  
-  - Desarrollo de un proyecto para analizar y resumir diálogos financieros utilizando Azure OpenAI y Azure Functions.  
-  - Conexión a bases de datos SQL, procesamiento de transcripciones de diálogos, extracción de resúmenes, valores de cadena y valores numéricos, e inserción de resultados en tablas específicas.  
-  - Tecnologías utilizadas: prompting, Langchain, Azure Functions, Azure OpenAI, pyodbc, Azure MS SQL, Pandas.
+1. **Ejecutar el script de conversión**:
 
----
+   ```bash
+   python create-cv.py
+   ```
 
-### Educación
+   Esto descargará el archivo Markdown desde GitHub, lo convertirá a HTML y luego generará un archivo PDF con el nombre `Vladimiro_Bellini_CV_yyyy-mm-dd.pdf`, donde `yyyy-mm-dd` es la fecha actual.
 
-**Universidad Austral, Argentina**
-- **Maestría en Ciencia de Datos, Magíster en Explotación de Datos y Gestión del Conocimiento**  
-  Abril 2021 - Diciembre 2022
+## Estructura del Proyecto
 
-**Universidad de San Andrés**
-- **Programa de Big Data e Inteligencia Artificial**  
-  Junio 2023 - Agosto 2023
+```plaintext
+curriculum-cv/
+├── venv/
+├── .gitattributes
+├── .gitignore
+├── create-cv.py
+├── curriculum-cv.md
+├── README.md
+├── requirements.txt
+└── Vladimiro_Bellini_CV_yyyy-mm-dd.pdf
+```
 
-**Universidad de Buenos Aires**
-- **Licenciatura en Diseño de Imagen y Sonido**  
-  2001 - 2006
+- `venv/`: Entorno virtual para las dependencias de Python.
+- `.gitattributes` y `.gitignore`: Archivos de configuración de Git.
+- `create-cv.py`: Script de Python para convertir el archivo Markdown a PDF.
+- `curriculum-cv.md`: Archivo Markdown con el contenido del CV.
+- `README.md`: Este archivo, proporcionando detalles del proyecto.
+- `requirements.txt`: Archivo de requisitos que lista las dependencias de Python.
+- `Vladimiro_Bellini_CV_yyyy-mm-dd.pdf`: El archivo PDF generado.
 
----
+## TODO
 
-### Habilidades
+### Generación Automática del Curriculum
 
-**Técnicas:**
-- IA, LLMs, Analítica de Datos, Ingeniería de Datos, Arquitectura ETL, SQL, Databricks, Spark, Airflow, Docker, Python, Pandas, Scikit-Learn, R, AWS, GCP, Azure, SSIS, Langchain, AI Studio.
+- **Extracción de Datos desde LinkedIn**:
+  - Implementar un script que realice scraping de LinkedIn (con el consentimiento del usuario) para extraer la información relevante del perfil del usuario.
 
-**Blandas:**
-- Expeditivo, Creatividad, Comunicación, Adaptabilidad, Storytelling.
+- **Conversión con Modelos LLM**:
+  - Utilizar un modelo de lenguaje de gran escala (LLM) para procesar y formatear la información extraída en un archivo Markdown simplificado y atractivo.
 
----
+- **Automatización del Flujo Completo**:
+  - Desarrollar un flujo automatizado que tome los datos extraídos de LinkedIn, los procese con el LLM y genere el archivo Markdown.
+  - Convertir automáticamente el archivo Markdown a PDF utilizando el script actual, estilizando el PDF para que tenga una apariencia profesional.
 
-### Premios
+## Contribuir
 
-- **Desafío CAF de estructuración y visualización de datos** - Banco de Desarrollo de América Latina (2016)
+Si deseas contribuir a este proyecto, por favor sigue estos pasos:
 
----
+1. Haz un fork del repositorio.
+2. Crea una nueva rama (`git checkout -b feature/nueva-funcionalidad`).
+3. Realiza tus cambios y haz commit (`git commit -am 'Agrega nueva funcionalidad'`).
+4. Envía los cambios a tu fork (`git push origin feature/nueva-funcionalidad`).
+5. Abre un Pull Request.
 
-### Certificaciones y Cursos
+## Licencia
 
-- **LangChain for LLM Application Development** (DeepLearning.AI)
-- **ChatGPT Prompt Engineering for Developers** (DeepLearning.AI)
-- **Natural Language Processing with Attention Models** (Deeplearning.AI)
-- **Google Cloud Big Data and Machine Learning Fundamentals**
-- **Microsoft Azure Data Fundamentals**
-- **Machine Learning** (Stanford University)
-- **Introduction to Computational Thinking and Data Science** (MIT)
-
----
-
-### Publicaciones
-
-- **Building global dataset of Urban Areas with OpenStreetMap data** (2016)  
-  ISBN 978-987-4101-04-4
-
----
-
-### Idiomas
-
-- Español: Nativo
-- Inglés: Avanzado
-
----
-
-### Contacto
-
-- **Correo:** vladimirobellini [at] gmail.com
-- **LinkedIn:** [linkedin.com/in/vladimirobellini](https://www.linkedin.com/in/vladimirobellini)
-- **GitHub:** [github.com/vlasvlasvlas](https://github.com/vlasvlasvlas)
-
+Este proyecto está bajo la Licencia MIT. Para más detalles, consulta el archivo [LICENSE](LICENSE).
